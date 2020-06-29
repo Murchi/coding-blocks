@@ -10,7 +10,14 @@ public class Power {
         if(n == 0 ){
             return 1;
         }
-        int pow = x * findPower(x,n-1);
-        return pow;
+        if(n%2 == 0) {
+            int y = findPower(x,n/2);
+            return y*y;
+        }
+        else {
+            return x*findPower(x,n-1);
+        }
+
     }
 }
+
