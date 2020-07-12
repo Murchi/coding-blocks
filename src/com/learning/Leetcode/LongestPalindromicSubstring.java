@@ -22,7 +22,7 @@ public class LongestPalindromicSubstring {
         if(len ==1 || len ==0)
             return str;
 
-        if(len%2 ==0){
+
             for(int i =1;i<str.length();i++) {
                 low = i-1;
                 high = i;
@@ -37,9 +37,9 @@ public class LongestPalindromicSubstring {
                     high++;
                 }
             }
-        }
 
-        else {
+
+
             for(int i =1;i<str.length();i++) {
                 low = i-1;
                 high = i+1;
@@ -54,7 +54,7 @@ public class LongestPalindromicSubstring {
                     high++;
                 }
             }
-        }
+
 
         return str.substring(start,start+maxLength);
     }
